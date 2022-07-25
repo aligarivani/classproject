@@ -1,18 +1,24 @@
 function openAlert() {
-  let name = document.getElementById("nameInput").value;
-  let lastName = document.getElementById("lastName").value;
-  let age = document.getElementById("ageInput").value;
-  let job = document.getElementById("jobInput").value;
-  if (name !== "" && lastName !== "" && age !== "" && job !== "") {
+  let userData = {};
+  userData.name = document.getElementById("nameInput").value;
+  userData.lastName = document.getElementById("lastName").value;
+  userData.age = document.getElementById("ageInput").value;
+  userData.job = document.getElementById("jobInput").value;
+  if (
+    userData.name !== "" &&
+    userData.lastName !== "" &&
+    userData.age !== "" &&
+    userData.job !== ""
+  ) {
     alert(
       " Name : " +
-        name +
+        userData.name +
         " , Last Name : " +
-        lastName +
+        userData.lastName +
         " , age : " +
-        age +
+        userData.age +
         " , job : " +
-        job
+        userData.job
     );
   } else {
     alert("filed is empty , try again");
