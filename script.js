@@ -1,9 +1,9 @@
 function openAlert() {
-  let userData = {};
-  userData.name = document.getElementById("nameInput").value;
-  userData.lastName = document.getElementById("lastName").value;
-  userData.age = document.getElementById("ageInput").value;
-  userData.job = document.getElementById("jobInput").value;
+  let userData = [];
+  userData.push(document.getElementById("nameInput").value);
+  userData.push(document.getElementById("lastName").value);
+  userData.push(document.getElementById("ageInput").value);
+  userData.push(document.getElementById("jobInput").value);
   if (
     userData.name !== "" &&
     userData.lastName !== "" &&
@@ -12,13 +12,13 @@ function openAlert() {
   ) {
     alert(
       " Name : " +
-        userData.name +
+        userData[0] +
         " , Last Name : " +
-        userData.lastName +
+        userData[1] +
         " , age : " +
-        userData.age +
+        userData[2] +
         " , job : " +
-        userData.job
+        userData[3]
     );
   } else {
     alert("filed is empty , try again");
